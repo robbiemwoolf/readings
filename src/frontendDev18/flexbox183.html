@@ -1,0 +1,47 @@
+Frontend Development
+Intro to flexbox
+
+overview: flexbox will help you create flexible, modern layouts
+
+terms:
+    flexible box module: flexbox, a css module that provides a robust set of tools for developers to solve common layout problems
+
+
+Did you know?
+    CSS is used by 96% of all websites
+
+
+Run frontend foundations starter repository
+    cd out of readings and into dothis 
+    then code starter-front-end-foundations-main
+
+    The files for this lesson are stored in the intro-to-flexbox folder; open the index.html file with vscode live server
+
+
+Introduction to flexbox
+    Flexbox provides a robust set of tools for developers to solve common layout problems, including the problem of building for various screen sizes
+
+    To start using flexbox, the first thing you'll have to do is to set the display css property of the parent container to flex.
+        This will tell the browser that all the items within this container should display as either a single row or a single column.
+            By default flex-direction is set to row.
+            Row is perfect for larger monitors.
+            Column is perfect for displaying the content on mobile devices.
+            You can also use row-reverse or column-reverse.
+        By default display is set to block.
+
+        Set the flex property
+            The flex: 1 declaration tells the .group container that each item should be the same width, regardless of its content, and it will fill the container appropriately.
+
+        Add margins
+            Setting margin property so that you can create a little visual barrier between the .item containers.
+
+        Add more rows 
+            The best part about the code that we just wrote is that it will now accommodate as many equally spaced items as you want within your groups. And you won't have to change anything at all in the css.
+
+            We can add two new sections to our html file with divs using group and item classes.
+            
+        Modifying the flex value
+            Currently the flex: 1 value is currently telling the .item containers to all display at the same width.
+            
+            Create an additional .item-double class and a flex value of 2. When applied in conjunction to the .item class, the new container will display at double the size of the others within that group.
+

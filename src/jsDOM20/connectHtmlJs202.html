@@ -1,0 +1,106 @@
+JavaScript and the DOM
+Connecting HTML and JavaScript
+
+overview: learn how to add script elements to HTML and connect external JavaScript files to HTML pages. JavaScript brings the life to the page.
+
+
+Terms:
+    Document Object Model: DOM, the data representation of the HTML elements that make up the structure of a web page, serving as away for JavaScript to understand the structure of an HTML page in order to make it dynamic.
+
+    child element: an element that's nested inside another element
+
+    parent element: an element that has one or more elements nested inside it
+
+
+The script tag 
+    To include some JavaScript on a page, add an HTML script tag to the BOTTOM of the <body> element. The script tag takes an attribute named src; this attribute specifies the JavaScript file to be included. Here's an example:
+
+    <script src="/path/to/your/script.js"></script>
+
+    If your browser happens across a script tag when it's rendering a requested web page, it will request the file and execute it immediately.
+
+    Referencing index.html and index.js files within the thinkful/dothis/jsDOM20/ folder.
+
+        Add the following code to the index.html file
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>JavaScript on your page</title>
+          </head>
+          <body>
+            <h1>Welcome to my website</h1>
+            <script src="index.js"></script>
+          </body>
+        </html>
+
+        Add the following code to the index.js file 
+            console.log("Hello!");
+
+        Using developer tools in the browser, you can see that the js code is executed as the page loads.
+
+
+Embedding JavaScript
+    Best to avoid this, as it isn't very scalable.
+    
+    But you would add this directly to the html page.
+        <script>console.log("This is embedded JS")</script>
+
+
+The <noscript> tag 
+    Some users deliberately turn off scripts or may be unable to run scripts for a number of reasons. At the very least, you should show these users a message indicating that the website depends on scripts. To do so, use the <noscript> tag, like this:
+        <noscript>This site requires JavaScript.</noscript>
+    
+    To view this on your own computer, you will need to temporarily disable JavaScript in your browser.
+
+
+Document Object Model
+    When your web page is loaded by the browser, it is parsed, and the browser constructs an internal representation of the HTML.
+    
+    You can also use JavaScript to interact with the HTML via this internal representation. 
+        This representation, which is called the Document Object Model (DOM), is the data representation of the HTML elements that make up the structure of a web page.
+        
+        The DOM is how the browser sees your HTML.
+
+        Consider the following code:
+        <html lang="en">
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+              <title>JavaScript on your page</title>
+            </head>
+            <body>
+              <header>
+                <h1>List of Parks</h1>
+              </header>
+              <main>
+                <ul>
+                  <li>Biscayne</li>
+                  <li>Grand Canyon</li>
+                  <li>Gateway Arch</li>
+                  <li>Indiana Dunes</li>
+                </ul>
+              </main>
+            </body>
+        </html>
+
+        Notice that the entire document is encolosed in the <html> element.
+            The <html> element is called the root of the DOM.
+
+        We can see that there are two elements directly inside the <html> element (the parent): 
+            the children (the <head> and the <body>)
+
+            <head>(parent)
+                (meta, meta, title) children
+
+            <body>(parent)
+                (header, main) children
+                    header (parent)
+                        (ul) child
+                    main (parent)
+                        (ul) child
+                            (li,li,li,li) children
+
+        Resembles a family tree just with a singular parent, family tree terminology is used when talking about the relationships between the elements of the DOM.
+                

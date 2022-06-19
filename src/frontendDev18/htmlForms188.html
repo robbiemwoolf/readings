@@ -1,0 +1,295 @@
+Frontend Development
+HTML forms
+
+overview: Forms are an important component of many websites. From signing up for a new user account to creating new blog posts, forms show up in many different ways on modern web pages. 
+
+Run frontend foundations starter repository
+    cd out of readings and into dothis 
+    then code starter-front-end-foundations-main
+
+    The files for this lesson are stored in the html-forms folder; open the index.html file with vscode live server
+
+
+Introduction to forms
+    What can forms be used for?
+        Sending an email through a web page
+        Submitting purchase order information
+        Completing survey questions
+        Collecting user registration
+        And many more... 
+
+
+HTML form basics
+    There are two ways to begin an html forms:
+        <form action="process-form.js" method="post">
+            <!--Add the HTML input elements here-->
+        </form>
+
+        or
+
+        <form action="baseball-stats.js" method="get">
+            <!--Add the HTML iput elements here-->
+        </form>
+
+    The <form> element does not have any visual design by default - but of course, you can still apply a background color or a border using CSS. 
+
+    With each <form> element are two attributes:
+        action: This atrribute holds the URL to the server-side file where the data will be Setting
+
+        method: This attribute specifies the HTTP method - post or get - that will be used with the action
+            post: this method can involve anything from storing or updating data, ordering a product, or sending an email
+
+            get: put simply, this method is used to retrieve data to display in the form 
+
+    There are various kinds of form fields that you can add to a form, including, but not limited to:
+        Text fields 
+        Text areas 
+        Radio buttons 
+        Checkboxes 
+        Drop-down list 
+        Submit and reset
+        Fieldset and legend 
+        Password field 
+       
+        
+Text fields 
+    <img src="images/textFields188.png" alt="First name: text field">
+
+        <form>
+            <label for="name">First name:</label>
+            <input id="name" type="text" name="name" />
+        </form>
+
+    The example above has two HTML elements: a label and an input 
+
+    The label tells users what information needs to go in a text field. It's connected to the input element with the for attribute as it links to the input's id.
+        The label is also important for accessibility. Assistive technologies such as screen readers use the label to tell the user what text should go in the text field.
+        
+        The label also makes it easier for users to interact with the text field by providing a larger hit area to click or touch.
+
+    The input has three attributes:
+        id: the id attribute gives the element a unique name so that the label knows how to connect with it
+
+        type: the type attribute determines what type of control to render (for example, whether the user clicks a radio button, checks a checkbox, or enters text). For a text field, the type is set to text,which creates a single line of input text.
+
+        name: the name attribute is used to identify the input field when the entire form is submitted to a server
+
+Text field options
+    autofocus: on: The autofocus attributw will set the first input to autofocus to help draw the user's attention to it. You only want this once on your page.
+
+    required: The required attribute will tell the user that this field must be filled in before they submit the form.
+
+    maxlength: number: The maxlength value limits the number of characters added to the text field.
+
+    <form>
+        <label for="location">Zipcode:</label>
+        <input
+          id="location"
+          type="text"
+          name="zipcode"
+          autofocus="on"
+          maxlength="5"
+          required
+        />
+      </form>
+
+Text areas
+    Text area fields present the user with a multi-line input field so that they can enter an unlimted number of characters.
+      <img src="images/textAreas188.png" alt="Your message: text area">
+
+      <form>
+        <label for="form-message">Your message:</label>
+        <textarea id="form-message" name="message"></textarea>
+      </form>
+
+    These are the attributes that can change the way that the text area looks and works:
+      cols: sets the visible width of a text area in character spaces. But it's better to use the width atrribute in css
+      
+      rows: sets the visible number of lines in a text area in character spaces. But it's better to use the height attribute in css
+
+      autofocus: on: the autofocus attribute sets the first input to autofocus to help draw the user's attention to it. Remember, you only want this once on your page
+
+      required: the required attribute tells the user that this field must be filled in before they submit the form 
+
+      maxlength: number: the maxlength value limits the number of characters that can be added to the text field
+
+
+Fieldset and legend 
+    The <fieldset> element is used to group together related inputs and labels. This will help web crawlers and screen readers, even if there is no visual representation here. The <legend> element is like a title for the <fieldset>. 
+        <img src="images/fieldsetLegend188.png" alt="Shipping information: Name: text field; Zip code: text field;">
+
+        Add this to an html <form> to get the above image.
+            <fieldset>
+                <legend>Shipping Information</legend>
+                <div>
+                  <label for="name">Full Name:</label>
+                  <input id="name" type="text" name="name" />
+                </div>
+                <div>
+                  <label for="location">Zipcode:</label>
+                  <input
+                    id="location"
+                    type="text"
+                    name="zipcode"
+                    autofocus="on"
+                    maxlength="5"
+                    required
+                  />
+                </div>
+              </fieldset>
+
+
+Placeholder text 
+    The text field and text area filed can both use the placeholder attribute to briefly describe the information that is expected in the field.
+
+    Keep in mind that for accessibility and usability reasons, labels shouldn't be replaced by placeholders.
+
+    Placeholder text disappears when the user types in the field, so if the user forgets what the form filed is expecting as an input, the user would have to delete what they wrote to reveal the placeholder text again. Moreover, some screen readers may not even read placeholder text aloud.
+
+    <img src="images/placeholder188.png" alt="Name: text field - Enter your full name; Your message: text area - How can I help you?">
+
+    Add placeholder text to the name and message fields 
+      <form>
+        <fieldset>
+          <legend>Shipping Information</legend>
+          <div>
+            <label for="name">Full Name:</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Enter your full name"
+            />
+          </div>
+          ...
+        </fieldset>
+        <div>
+          <label for="form-message">Your message:</label>
+          <textarea
+            id="form-message"
+            name="message"
+            autofocus="on"
+            required
+            maxlength="200"
+            placeholder="How can I help you?"
+          ></textarea>
+        </div>
+        ...
+      </form>
+
+
+Password field 
+    <img src="images/passwordField188.png" alt="Password: text field with hidden characters">
+
+    <div>
+        <label for="password">Password:</label>
+        <input id="password" type="password" name="password" minlength="8" />
+    </div>
+
+Radio buttons
+    Radio buttons allow the web user to select only one of the limited number choices available. The look like this:
+        <img src="images/radioButtons188.png" alt="Fave color: Select Red, Blue, White">
+
+    To create a radio button, you'd have to set the type attribute of an input tag to "radio", as follows:
+        <input id="red" name="color" type="radio" value="red" />
+        <label for="red">Red</label>
+    The new attribute here is the value. The value is important because that is the data for the one selected item that will be submitted with the form data.
+    
+    There is no necessary order for the radio button's parameters, so you can place the input, name, and value in any order that you wish. When you click on the text of the radio button, the color is selected. That's because of the for attribute and how it matches up with the ID of the <input> element.
+
+
+Checkboxes 
+    Checkboxes allow the user to select one or more options from the number of choices available. They look something like this:
+        <img src="images/checkboxes188.png" alt="Choose your monster's features: Choose Scales, Horns, and/or Wings">
+
+        To create a checkbox, you'd have to set the type attribute of an input tag to "checkbox", as follows:
+        <div>
+            <h2>Choose your monster's features:</h2>
+            <div>
+              <input name="scales" type="checkbox" id="scales" />
+              <label for="scales">Scales</label>
+            </div>
+            <div>
+              <input name="horns" type="checkbox" id="horns" />
+              <label for="horns">Horns</label>
+            </div>
+            <div>
+              <input name="wings" type="checkbox" id="wings" />
+              <label for="wings">Wings</label>
+            </div>
+        </div>
+
+      
+Drop-down list 
+    A drop-down list, also called a select menu list, is a toggleable menu that allows the user to choose one value from a predefined list.
+
+    It tends to be more user friendly than a list of radio buttons when there is a long list of items. Drop-down lists look something like this:
+        <img src="images/drop-downList188.png" alt="Choose a font: drop-down list: Arial, Times New Roman, Comic Sans, Papyrus">
+
+    To create a drop-down list, you'd have to use the <select> tag in conjunction with <option> tags. The <select> tag accepts the following attributes:
+
+        size: This sets the display of the drop-down menu to show a specified number of items. For example, if you wanted to show a list with 4 items out of 10, you'd set the size to 4 (size="4").
+            
+        multiple: This option allows for the user to choose multiple sections in the drop-down menu.
+
+    Add a drop-down list to your form 
+    <div>
+        <label for="fonts">Choose a font:</label>
+        <select name="fonts" id="fonts" size="1">
+          <option value="arial">Arial</option>
+          <option value="times">Times New Roman</option>
+          <option value="comicsans">Comic Sans</option>
+          <option value="papyrus">Papyrus</option>
+        </select>
+    </div>
+
+    In the above code, size="1" sets the display of the drop-down menu to show a single item, with the first of the list by default.
+
+    Unlike all of the other inputs, it isn't recommended to try to update the style of an html drop-down menu using css.
+
+    As you learn more about JS, you'll be able to crate a clickable drop-down menu without using this input at all.
+
+
+Submit and reset
+    Buttons are similar to links, but they are really important to have in forms.
+    Whereas a link is used to navigate the user to a new page or resource, a button toggles something in the interface - which makes buttons perfect for submitting or resetting the data in a form. 
+        <img src="images/submitResetButtons188.png" alt="submit button and reset button">
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    There are three types of buttons:
+        submit: Submit buttons send the data in the form to the backend program that collects the data.
+
+        reset: Reset buttons clear all of the data that has been changed in the existing form elements.
+    
+        button: Buttons with type="button" have no default behavior. They are often used to trigger client-side functions or scripts that listen to the element's events 
+
+    Notice that the default presentation of a button looks very different compared to a link. A link may display as blue text with an underline, whereas a button is a rounded rectangle around the text.
+
+
+Patterns
+    The pattern attribute is used to supply patterns that the user's input must match in order to be valid.
+    A complete list of useful patterns can be found at HTML5Pattern.
+        https://www.html5pattern.com/
+    
+    For example, the pattern "\d{3}[\-]\d{3}[\-]\d{4}" will warn the user if they are not providing a correct 10-digit phone number in the xxx-xxx-xxxx format. The visual error that appears is a default with the browser.   
+
+    Validate the phone number   
+    Add the following phone input field to the index.html file 
+    <div>
+        <label for="phone">Phone #:</label>
+        <input
+          id="phone"
+          type="text"
+          name="phone"
+          pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+          placeholder="xxx-xxx-xxxx"
+        />
+    </div>
+
+    An error message "Please match the requested format" will display if the phone number format is wrong when you press the Submit button.
+
+
+More input types
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types
+        

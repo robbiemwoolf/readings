@@ -1,0 +1,44 @@
+Frontend Development
+Intro to Media Queries
+
+overview: media queries are a css feature that allows content to adapt to different screen sizes, such as mobile and desktop screens. With a simple media query, you can easily modify a website's appearance on different devices.
+
+
+Run frontend foundations starter repository
+    cd out of readings and into dothis 
+    then code starter-front-end-foundations-main
+
+    The files for this lesson are stored in the intro-to-media-queries folder; open the index.html file with vscode live server
+
+
+Media queries
+    Media queries are essentially an if statement for css. 
+        A condition is set, and if that condition is met, then the css rules within it will be applied. 
+    Typically, media queries are used for changing the css of a website based on screen size.
+
+    Syntax
+        @media <media type> (<media features>) {
+            <CSS Rules>
+        } 
+
+    Media types can be set to all, print, screen, or speech.
+        The all type, which is the most common type and the default in HTML5, applies the media query to every media type.
+
+        If you want the stlyles within the media query to apply only when the web page is printed, you can use print instead.
+    
+    The complete list of media features is long, but these are the most common:
+        width
+        height
+        orientation
+
+        p {
+            font-size: 14px;
+        }
+        
+        @media all and (min-width: 800px) {
+            p {
+                font-size: 24px;
+            }
+        }
+
+        The code above is saying that the paragraph should generally display at 14 pixels. The should only be displayed at 24 pixels when the broswer has a width of 800 pixels or greater.

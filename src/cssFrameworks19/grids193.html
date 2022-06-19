@@ -1,0 +1,114 @@
+CSS frameworks
+Grids
+
+overview: learn how to use grids to organize a website layout in CSS, including an overview of rows and columns and responsive layout
+
+terms
+    grid: a structural system of horizontal and vertical gridlines that helps ensure that your website is well-alligned and quickly scalable
+
+    responsive: the property of allowing a layout to change dynamically based on the size of the screen
+
+    mobile-first: a layout where the default configuration is for narrow screen and mobile devices
+
+    css container: the most basic conceptual element in most frameworks, used to encapsulate and pad the rest of the page
+
+
+The grid system
+    A grid allows you to easily organize your website so that it is well aligned and quickly scalable
+
+    most css frameworks also include classes that make it easier to build responsive grids, making the transition from mobile to desktop seamless
+
+    a grid in most css frameworks is separated into columns and rows
+        it's standard for most css grid frameworks to have 12 columns and any number of rows
+
+        <img src="images/gridExample193.png" alt="twelve column grid example">
+
+        in the above example, the twelve columns are marked in dark grey. And each colored section generally represents a horizontal row 
+
+        in terms of the grid system, the following statements are true of the above image:
+
+            the ehader is the first row on the page and it spans 12 columns
+
+            the nav spans three columns, in contrast to the container that is wrapping both the content and the footer. The nav also goes across two different rows 
+
+            both the content and footer are included together in their own container. They span nine columns. The content and footer are each in their own separate row 
+
+    most websites fit into this kind of structure that prioritizes containers, rows, and columns.   
+    
+
+containers   
+    a css container is the most basic conceptual element in most frameworks
+
+    css containers are used to encapsulate and pad the rest of your page
+
+    css containers aren't usually nested inside of each other
+
+    if you use the grid sytem from Bootstrap, you will need at least one container on your page
+
+    to make an element into a container,  you simply need to add a class of .container to it. Any element can be a container, but it's most typical for the .container class to be added to a <main> or <section> element
+        <main class="container">
+            <!-- ... -->
+        </main>
+
+    rows use the .row class
+
+    columns use the .col class
+
+    Each row contains a number of columns. Bootstrap allows for a lot of variety in how columns are used, but columns must be inside of a <div> with a .row class element 
+
+    You will need to use several wrapping <div> elements to make use of rows and columns
+
+Varied column sizes
+    In the documentation, you might have notice .col classes with additional text next to them.
+
+    When a number follows a column, as in .col-4, it defines the size of the column.
+        
+        Remember that the grid system is typically based on 12 columns
+
+        The .col-4 class means that the selected element will take up 4 out of the 12 columns
+
+            Any columns with a .col class will equally share the rest of the space.
+
+
+Responsiveness
+    Bootstrap is developed to be mobile-first, which means that it's assumed that user's will be viewing your site on mobile
+
+    Bootstrap has four different sizing terms that you can add to your columns:
+        
+        sm: For small devices and landscape phones
+        md: For tablets and smaller computers
+        lg: For desktop computers
+        xl: For large monitors
+
+        Bootstrap's documentation on responsive breakpoints
+            https://getbootstrap.com/docs/4.5/layout/overview/#responsive-breakpoints
+
+    Example:
+        
+        <body class="container">
+            <div class="row">
+                <div class="col col-lg-8">
+                    <p>col col-lg-8</p>
+                </div>
+                <div class="col col-lg-2">
+                    <p>col col-lg-2</p>
+                </div>
+                <div class="col col-lg-2">
+                    <p>col col-lg-2</p>
+                </div>
+            </div>
+        </body>
+
+        Above you can see that on large screens the left column will take up most of the space, but as the screen size decreases, all of the columns will eventually end up being the same size.
+
+
+Using the documentation
+    Explore the Bootstrap documentation to cover more aspects of the grid system.
+
+    This part lays out information on varied column widths
+        https://getbootstrap.com/docs/4.5/layout/grid/#setting-one-column-width
+
+    This part describes how rows and columns can be set to be responsive.
+        https://getbootstrap.com/docs/4.5/layout/grid/#responsive-classes
+
+    YOu don't need to memorize everything on the Bootstrap website. Instead, rely on it as a tool for learning and solving problems
