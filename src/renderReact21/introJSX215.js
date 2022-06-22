@@ -14,7 +14,7 @@
 
 // Embedding JavaScript expressions in JSX
 
-    // JSX is an expression, so you can save it to a varialbe and then return the value of that element, as shown here:
+    // JSX is an expression, so you can save it to a variable and then return the value of that element, as shown here:
 
     const element = <h1>Hello World!</h1>;
     return element;
