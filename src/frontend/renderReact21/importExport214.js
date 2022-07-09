@@ -27,7 +27,7 @@
 
     import { website, username } from ".constants";
 
-    // after running the import statement aboe, you'll have access to the website and username variables
+    // after running the import statement above, you'll have access to the website and username variables
 
 // Default exports
 
@@ -58,7 +58,7 @@
 
 // Combining named and default exports
 
-    // ou can have one default export and any number of named exports. For example, the following file has a default and a named export.
+    // You can have one default export and any number of named exports. For example, the following file has a default and a named export.
 
     export default const website = "https://www.thinkful.com/";
     export const username = "Bob";

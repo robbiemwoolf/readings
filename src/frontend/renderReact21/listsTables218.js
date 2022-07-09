@@ -51,7 +51,7 @@
 
 // Adding Keys
 
-    // If you look a the console for the above example, you will notic ethat you get a warning:
+    // If you look a the console for the above example, you will notice that you get a warning:
         // Warning: Each child in a list should have a unique 'key' prop.
 
     // React uses keys to help it update a list when the groceryList array changes. When you're creating a list, always give each list item a unique key. You can use item as the key if you know that it will be unique, but it is generally safer to use the list index or a unique ID.

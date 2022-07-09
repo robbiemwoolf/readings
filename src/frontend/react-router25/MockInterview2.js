@@ -1,5 +1,20 @@
 // Friday, July 8th at 9:30 am PST
 
+// https://beta.reactjs.org/learn
+
+// https://beta.reactjs.org/learn/thinking-in-react
+
+// https://scrimba.com/allcourses?price=free
+
+// https://flaviocopes.com
+
+// https://roadmap.sh
+
+// https://www.firsttimersonly.com/
+
+// https://beta.reactjs.org/
+// https://developer.mozilla.org/en-US/docs/Web/javascript
+
 // Topics
 
     // Component and Props

@@ -185,7 +185,7 @@
 
         // This makes your code more readable and easier to modify
 
-    // It's standart to put each component in its own file; this makes it easier to navigate the code.
+    // It's standard to put each component in its own file; this makes it easier to navigate the code.
 
     // We can break our App above into two component files: App.js and WelcomeBack.js.
 
@@ -246,7 +246,7 @@
 
 
 // ------- QUESTIONS ---------
-    // I understand that .jsx and .js are functionally the same but is there an industry standard?
+    // I understand that .jsx and .js are functionally the same but is there an industry standard? No, it seems that you should just us .js because it is already a signifier and a requirement to capitalize the file name.
 
 
 

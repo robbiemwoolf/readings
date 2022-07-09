@@ -54,9 +54,9 @@
 
     // The files at the root level of this project typically include JavaScript configuration files like a package.json file and a README.md file.
 
-    // The public folder represents what is available to web browsers. This folder also conatains the index.html file, which is the entry point to the application. During the build process, React inserts a script tag referencing the compiled code into the index.html file.
+    // The public folder represents what is available to web browsers. This folder also contains the index.html file, which is the entry point to the application. During the build process, React inserts a script tag referencing the compiled code into the index.html file.
 
-    // The src folder is where most of your React components will be written. Only the files within this folder will be processec by React.This folder will commonly be used to also contain subdirectories for  the files associated with each component, including images and CSS stylesheets.
+    // The src folder is where most of your React components will be written. Only the files within this folder will be processed by React. This folder will commonly be used to also contain subdirectories for  the files associated with each component, including images and CSS stylesheets.
 
     // You won't need all these files to get started with React. And at the start of a Create React App project, you can usually delete the following files:
 
